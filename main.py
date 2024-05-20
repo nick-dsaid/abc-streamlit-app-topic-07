@@ -1,15 +1,16 @@
 import streamlit as st
 from helper_functions import llm
+from utility import check_password
 from logics import customer_query_handler
 
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
     layout="centered",
     page_title="My Streamlit App",
-    page_icon="images/launchpad-icon.png"
 )
 # endregion <--------- Streamlit App Configuration --------->
-
+if not check_password():  
+    st.stop()
 st.title("Streamlit App")
 
 form = st.form(key="form")

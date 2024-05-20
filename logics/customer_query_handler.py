@@ -152,7 +152,6 @@ def process_user_query(query):
 
         return message_to_user
 
-        
 
 def divert_query_to_registration_dept():
     # A dummy implementatiom
